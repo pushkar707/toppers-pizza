@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d5bdaf;
+}
+.navbar .left-nav {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.navbar .left-nav .menu-icon {
+  font-size: 30px;
+  margin: auto 20px auto 40px;
+}
+.navbar .left-nav img {
+  width: 80px;
+  margin: auto 14px;
+}
+.navbar .right-nav {
+  display: flex;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.navbar .right-nav .text {
+  margin: auto 10px;
+}
+.navbar .right-nav .service {
+  padding-left: 10px;
+  border-left: 1px solid #533c2d;
+}
+.navbar .right-nav .address {
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  align-items: center;
+  height: 90%;
+  background-color: #c49c82;
+  border-radius: 5px;
+}
+.navbar .right-nav .account {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 25px;
+}/*# sourceMappingURL=app.css.map */
