@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
   font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #edede9;
 }
 
 .navbar {
@@ -10,6 +15,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #d5bdaf;
+  z-index: 10;
 }
 .navbar .left-nav {
   display: flex;
@@ -23,7 +29,14 @@
 }
 .navbar .left-nav img {
   width: 80px;
-  margin: auto 14px;
+  margin: auto 7px;
+  margin-top: -5px;
+}
+.navbar .items-nav {
+  display: flex;
+}
+.navbar .items-nav .menu-category {
+  margin: auto 5px;
 }
 .navbar .right-nav {
   display: flex;
@@ -54,4 +67,85 @@
   height: 100%;
   padding-left: 20px;
   padding-right: 25px;
+}
+
+.content {
+  display: flex;
+}
+.content .left-content {
+  width: 70%;
+  margin-left: 2.5vw;
+}
+.content .right-content {
+  width: 30%;
+  position: relative;
+}
+
+.menu-nav {
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  padding: 25px;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  color: #de3f4c;
+  font-size: 20px;
+  font-family: "Hanken Grotesk", sans-serif;
+  cursor: pointer;
+}
+.menu-nav .menu-category {
+  margin: auto 12px;
+}
+.menu-nav .selected {
+  color: #533c2d;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1px 20px;
+}
+.items .item {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: auto 1.5% 30px;
+}
+.items .item .item-name {
+  text-transform: uppercase;
+  font-size: 17px;
+  height: 40px;
+}
+.items .item .selects {
+  margin-top: 8px;
+  width: 100%;
+}
+.items .item .selects .form-select {
+  display: inline-block;
+  max-width: 47%;
+  border-color: #e9edc9;
+}
+.items .item .btn {
+  width: 47%;
+}
+
+.cart {
+  background-color: whitesmoke;
+  width: 30%;
+  height: 100vh;
+  padding-top: 0;
+  padding-bottom: 20px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+.cart .space {
+  height: 60px;
+  width: 100%;
+  background-color: #d5bdaf;
+  margin-bottom: 15px;
 }/*# sourceMappingURL=app.css.map */

@@ -16,6 +16,14 @@ const Navbar = () => {
             <MenuIcon className='menu-icon'/>
             <img src={logo} alt="" />
         </div>
+        <div className="items-nav">
+            <p className="menu-category selected">Pizza</p>
+            <p className="menu-category">TopperStix</p>
+            <p className="menu-category">Wings</p>
+            <p className="menu-category">Sides</p>
+            <p className="menu-category">Desserts</p>
+            <p className="menu-category">Drinks</p>
+        </div>
         <div className="right-nav">
             <div className="service">
             <FormControl>
@@ -29,14 +37,14 @@ const Navbar = () => {
                 </RadioGroup>
             </FormControl>
             </div>
-            <div className="address">
+            <div className="address me-3">
                 <AddLocationAltIcon/>
                 <span className='text'>Select Your Location</span>
             </div>
-            <div className="account">
+            {/* <div className="account">
                 <PersonIcon/>
                 <span className="text">My Account</span>
-            </div>
+            </div> */}
         </div>
     </div>
   )
