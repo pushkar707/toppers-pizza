@@ -14,7 +14,7 @@ import {useGlobalContext} from '../context'
 import Sidebar from './Sidebar';
 
 const Navbar = () => {
-    const {handleDrawerOpen} = useGlobalContext()
+    const {handleDrawerOpen,setcategory,category} = useGlobalContext()
   return (
     <div>
         <div className='navbar'>
@@ -31,12 +31,12 @@ const Navbar = () => {
                 <img src={logo} alt="" />
             </div>
             <div className="items-nav">
-                <p className="menu-category selected">Pizza</p>
-                <p className="menu-category">TopperStix</p>
-                <p className="menu-category">Wings</p>
-                <p className="menu-category">Sides</p>
-                <p className="menu-category">Desserts</p>
-                <p className="menu-category">Drinks</p>
+                <p className={`menu-category ${category==='pizza' && 'selected'}`} onClick={()=>{setcategory('pizza')}}>Pizza</p>
+                <p className={`menu-category ${category==='topperstix' && 'selected'}`} onClick={()=>{setcategory('topperstix')}}>TopperStix</p>
+                <p className={`menu-category ${category==='wings' && 'selected'}`} onClick={()=>{setcategory('wings')}}>Wings</p>
+                <p className={`menu-category ${category==='sides' && 'selected'}`} onClick={()=>{setcategory('sides')}}>Sides</p>
+                <p className={`menu-category ${category==='desserts' && 'selected'}`} onClick={()=>{setcategory('desserts')}}>Desserts</p>
+                {/* <p className={`menu-category ${category==='drinks' && 'selected'}`} onClick={()=>{setcategory('drinks')}}>Drinks</p> */}
             </div>
             <div className="right-nav">
                 <div className="service">
@@ -59,6 +59,11 @@ const Navbar = () => {
                     <PersonIcon/>
                     <span className="text">My Account</span>
                 </div> */}
+            </div>
+            <div className="phone-right-nav">
+            <div className="me-3">
+                    <AddLocationAltIcon/>
+                </div>
             </div>
         </div>
         <Sidebar/>

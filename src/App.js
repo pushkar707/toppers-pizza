@@ -1,6 +1,7 @@
 import Cart from "./components/Cart";
 import Items from "./components/Items";
 import Navbar from "./components/Navbar";
+import PhoneBtns from "./components/PhoneBtns";
 import './static/css/app.css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Cart/>
         </div>
       </div>
+      <PhoneBtns/>
     </div>
   );
 }

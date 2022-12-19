@@ -3,8 +3,10 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import { useGlobalContext } from '../context';
 
 const Item = ({item}) => {
+  const {addToCart} = useGlobalContext()
   return (
     <div>
         <Card className='item '  key={item.id}>
@@ -36,7 +38,7 @@ const Item = ({item}) => {
                 </div>
                 <div className='mt-2'>
                   <button className='btn me-1' style={{border:'2px solid #e9edc9'}}>Customize</button>
-                  <button className='btn ms-1' style={{backgroundColor:'#e9edc9'}}>Add To Cart</button>
+                  <button className='btn ms-1' style={{backgroundColor:'#e9edc9'}} onClick={()=>addToCart(item)}>Add To Cart</button>
                 </div>
               </CardContent>
           </Card>

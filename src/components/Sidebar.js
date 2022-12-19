@@ -31,11 +31,12 @@ const Sidebar = () => {
     <div className='sidebar'>
         <Drawer className='drawer'
         sx={{
+          position:'absolute',
             transition: '0.4s all',
           width: drawerWidth,
           flexShrink: 0,
           '& .MuiDrawer-paper': {
-            bgcolor: '#dad7cd',
+            bgcolor: 'white',
             width: drawerWidth,
             boxSizing: 'border-box',
           },
@@ -49,7 +50,7 @@ const Sidebar = () => {
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
         </DrawerHeader>
-        <Divider />
+        <Divider sx={{height:'1px',bgcolor:'grey'}} />
         {/* <List sx={{paddingLeft:'10px'}}> */}
         <List>
           {['Menu', 'Rewards', 'Deals', 'Franchise', 'Jobs', 'Order Tracking', 'Locations'].map((text, index) => (
