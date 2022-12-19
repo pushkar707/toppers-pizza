@@ -1,29 +1,26 @@
 import React,{useState} from 'react'
-import { styled } from '@mui/material/styles';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import IconButton from '@mui/material/IconButton';
-import Grid from '@mui/material/Grid';
-import DeleteIcon from '@mui/icons-material/Delete';
+import CloseIcon from '@mui/icons-material/Close';
 
-
-
-const Demo = styled('div')(({ theme }) => ({
-  backgroundColor: theme.palette.background.paper,
-}));
 
 const Cart = () => {
     const [cart, setcart] = useState([{name:'TOPPERS CLASSIC',size:"Medium",type:"Tallboy"},{name:'TOPPERS CLASSIC',size:"Medium",type:"Tallboy"},{name:'TOPPERS CLASSIC',size:"Medium",type:"Tallboy"}])
   return (
     <div className='cart'>
-        <div className="space"></div>
         <p className='h3 fw-bold text-center'>Your Cart</p>            
         <div className='cart-items'>
             {cart.map(item => {
-                return 
+                return <div className='item'>
+                    <div className='item-des'>
+                        <p className="name">{item.name}</p>
+                        <p className="details">{item.size} | {item.type}</p>
+                    </div>
+                    <div className='clear'>
+                        &#8377;600 &nbsp; <CloseIcon/>
+                    </div>
+                </div>
             })}
         </div>
+        <button className='btn btn-success mx-3 me-4 mt-2'>Checkout</button>
     </div>
   )
 }

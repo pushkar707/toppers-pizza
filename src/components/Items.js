@@ -4,18 +4,17 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-
-
-  
+import {useGlobalContext} from '../context'
 
 const Items = () => {
+  const {drawerWidth,open} = useGlobalContext()
   return (
-    <div className='items'>
+    <div className='items row' style={{marginLeft:`${open ? drawerWidth-10: "0"}px`}}>
         {Data.map((item)=>{
-            return <Card className='item' key={item.id}>
-            <CardActionArea>
+            return <div className={!open ? 'col-md-4': 'col-md-6'}>
+              <Card className='item '  key={item.id}>
               <CardMedia
+                
                 component="img"
                 height="140"
                 image={item.image}
@@ -45,8 +44,8 @@ const Items = () => {
                   <button className='btn ms-1' style={{backgroundColor:'#e9edc9'}}>Add To Cart</button>
                 </div>
               </CardContent>
-            </CardActionArea>
           </Card>
+            </div>
         })}
     </div>
   )

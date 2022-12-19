@@ -10,12 +10,15 @@ body {
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
   display: flex;
   height: 60px;
   justify-content: space-between;
   align-items: center;
   background-color: #d5bdaf;
   z-index: 10;
+  width: 100%;
 }
 .navbar .left-nav {
   display: flex;
@@ -33,10 +36,22 @@ body {
   margin-top: -5px;
 }
 .navbar .items-nav {
+  font-size: 17px;
   display: flex;
 }
 .navbar .items-nav .menu-category {
-  margin: auto 5px;
+  cursor: pointer;
+  margin: auto 8px;
+  transition: all 0.4s;
+}
+.navbar .items-nav .menu-category:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #e63946;
+}
+.navbar .items-nav .selected {
+  font-weight: bold;
+  color: #e63946;
 }
 .navbar .right-nav {
   display: flex;
@@ -71,14 +86,52 @@ body {
 
 .content {
   display: flex;
+  margin-top: 100px;
 }
 .content .left-content {
-  width: 70%;
+  width: 95%;
   margin-left: 2.5vw;
 }
 .content .right-content {
   width: 30%;
   position: relative;
+}
+.content .right-content .cart {
+  border-left: 1px solid rgba(227, 202, 194, 0.7);
+  background-color: rgb(245, 236, 232);
+  width: 24%;
+  height: 100vh;
+  padding-bottom: 20px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 95px;
+}
+.content .right-content .cart .cart-items {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+.content .right-content .cart .cart-items .item {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  padding-bottom: 18px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.content .right-content .cart .cart-items .item .name {
+  height: 5px;
+}
+.content .right-content .cart .cart-items .item .details {
+  height: 5px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.content .right-content .cart .cart-items .item .clear {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
 }
 
 .menu-nav {
@@ -107,11 +160,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 1px 20px;
+  transition: 0.4s all;
 }
 .items .item {
   display: flex;
   flex-direction: column;
-  width: 30%;
   margin: auto 1.5% 30px;
 }
 .items .item .item-name {
@@ -130,22 +183,4 @@ body {
 }
 .items .item .btn {
   width: 47%;
-}
-
-.cart {
-  background-color: whitesmoke;
-  width: 30%;
-  height: 100vh;
-  padding-top: 0;
-  padding-bottom: 20px;
-  position: fixed;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-}
-.cart .space {
-  height: 60px;
-  width: 100%;
-  background-color: #d5bdaf;
-  margin-bottom: 15px;
 }/*# sourceMappingURL=app.css.map */
