@@ -6,7 +6,7 @@ const Cart = () => {
     const [cart, setcart] = useState([{name:'TOPPERS CLASSIC',size:"Medium",type:"Tallboy"},{name:'TOPPERS CLASSIC',size:"Medium",type:"Tallboy"},{name:'TOPPERS CLASSIC',size:"Medium",type:"Tallboy"}])
   return (
     <div className='cart'>
-        <p className='h3 fw-bold text-center'>Your Cart</p>            
+        <p className='cart-heading h3 fw-bold text-center'>Your Cart</p>            
         <div className='cart-items'>
             {cart.map(item => {
                 return <div className='item'>
