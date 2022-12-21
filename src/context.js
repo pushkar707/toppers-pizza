@@ -6,8 +6,12 @@ const AppProvider = ({children}) =>{
   const drawerWidth = 250; 
   const [open, setOpen] = useState(false);
   const [category, setcategory] = useState('pizza')
-  const [cart, setcart] = useState([])
+  const [cart, setcart] = useState([])  
   const cartRef = useRef(null)
+
+  const saveToLocalStorage = (item) => {
+    localStorage.setItem('react-toppers-app-cart',JSON.stringify(item))
+  }
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -17,8 +21,9 @@ const AppProvider = ({children}) =>{
     setOpen(false);
   };
 
-  const addToCart = (item) => {
-    setcart([...cart,item])
+  const addToCart = (name,size,type) => {
+    setcart([...cart,{name,size,type}])
+    saveToLocalStorage([...cart,{name,size,type}])
   }
 
   const removeFromCart = (item) => {
@@ -26,8 +31,9 @@ const AppProvider = ({children}) =>{
       return i!==item
     })
     setcart(newCart)
+    saveToLocalStorage(newCart)
   }
-    return <AppContext.Provider value={{handleDrawerOpen,handleDrawerClose,open,drawerWidth,category,setcategory,cart,addToCart,removeFromCart,cartRef}}>
+    return <AppContext.Provider value={{handleDrawerOpen,handleDrawerClose,open,drawerWidth,category,setcategory,cart,setcart,addToCart,removeFromCart,cartRef}}>
         {children}
     </AppContext.Provider>
 }

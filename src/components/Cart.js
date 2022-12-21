@@ -18,7 +18,7 @@ const Cart = () => {
                 return <div className='item'>
                     <div className='item-des'>
                         <p className="name">{item.name}</p>
-                        <p className="details">Medium | TallBoy</p>
+                        <p className="details">{item.size} | {item.type}</p>
                     </div>
                     <div className='clear'>
                         $5.99 &nbsp; 
