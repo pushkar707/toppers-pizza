@@ -39,7 +39,7 @@ const PhoneBtns = () => {
         <Modal.Body>
             <List>
                 {categories.map(item=>{
-                    return <ListItem  onClick={()=>handleClose(item)}>{item.charAt(0).toUpperCase()+item.slice(1)}</ListItem>
+                    return <ListItem className='phone-menu-items' onClick={()=>handleClose(item)}>{item.charAt(0).toUpperCase()+item.slice(1)}</ListItem>
                 })}
             </List>
         </Modal.Body>

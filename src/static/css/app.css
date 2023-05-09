@@ -249,6 +249,10 @@ body {
   transition: 0.4s all;
 }
 
+.phone-menu-items {
+  cursor: pointer;
+}
+
 .phone-right-nav {
   display: none;
 }

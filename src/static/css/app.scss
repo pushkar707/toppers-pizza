@@ -6,7 +6,6 @@
 }
 body{
     font-family: Roboto, Helvetica, Arial, sans-serif;
-    background-color: #edede9;
     overflow-x: hidden;
 }
 .navbar{
@@ -248,6 +247,10 @@ body{
 .phone-menu{
     display: none;    
     transition: 0.4s all;
+}
+
+.phone-menu-items{
+    cursor: pointer;
 }
 
 .phone-right-nav{
